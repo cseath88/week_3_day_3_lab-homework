@@ -7,5 +7,6 @@ def index():
     return render_template('index.jinja', title = 'Home', orders = order_list)
 
 @app.route('/orders/<index>')
-def get_index():
-    return render_template('order.jinja', title = 'Order', orders = order_list)
+def get_index(index):
+    index = order_list[int(index)]
+    return render_template('order.jinja', title = 'Order', order=id) 
